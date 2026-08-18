@@ -91,7 +91,17 @@ h1 {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border: 5px solid #02394d;
     border-radius: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 300ms ease;
+}
+
+.gallery-image:hover {
+    position: relative;
+    z-index: 1;
+    transform: scale(1.1);
 }
 
 .page-footer {
@@ -101,6 +111,7 @@ h1 {
     width: 100%;
     min-height: 103px;
     background-color: #02394d;
+    margin-top: auto;
 }
 
 .footer-content {
@@ -132,9 +143,7 @@ h1 {
     line-height: 100%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-
-}
+@media screen and (min-width: 768px) and (max-width: 1280px) {}
 
 @media screen and (min-width: 1281px) {
     .page-header {
