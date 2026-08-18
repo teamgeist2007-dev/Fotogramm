@@ -156,7 +156,48 @@ h1 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .page-header {
+        height: 72px;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
 
+    .header-content {
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .page-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .page-brand-name {
+        font-size: 22px;
+    }
+
+    .content-frame {
+        gap: 64px;
+        padding: 64px 32px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        max-width: 980px;
+        font-size: 48px;
+        white-space: nowrap;
+    }
+
+    .photo-gallery {
+        max-width: 980px;
+        padding-bottom: 40px;
+    }
+
+    .page-footer {
+        min-height: 112px;
+    }
 }
 
 @media screen and (min-width: 1281px) {
