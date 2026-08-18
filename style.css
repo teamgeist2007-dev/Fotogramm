@@ -17,24 +17,19 @@ h1 {
     text-align: center;
 }
 
-.header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 .page-header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 72px;
-    padding: 0;
-    box-sizing: border-box;
     background-color: #02394d;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-brand,
@@ -110,8 +105,8 @@ h1 {
     align-items: center;
     width: 100%;
     min-height: 103px;
-    background-color: #02394d;
     margin-top: auto;
+    background-color: #02394d;
 }
 
 .footer-content {
@@ -143,13 +138,44 @@ h1 {
     line-height: 100%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {}
+.image-dialog {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.image-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dialog-image {
+    display: block;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+
+}
 
 @media screen and (min-width: 1281px) {
     .page-header {
         justify-content: flex-start;
         height: 81px;
-        padding: 20px 140px;
+        padding: 20px 140px 20px 241px;
+        box-sizing: border-box;
+    }
+
+    .header-content {
+        justify-content: flex-start;
+        width: auto;
+        max-width: none;
+        margin: 0;
+    }
+
+    .page-brand {
+        margin: 0;
     }
 
     .page-logo {
@@ -170,5 +196,9 @@ h1 {
     .photo-gallery {
         max-width: 1170px;
         padding-bottom: 32px;
+    }
+
+    .page-footer {
+        min-height: 128px;
     }
 }

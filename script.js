@@ -7,7 +7,10 @@ function renderImageCount(){
 }
 
 function openImage(i){
-    console.log(i);
+    const ImageDialog = document.getElementById('image-dialog');
+
+    ImageDialog.innerHTML = `<img class="dialog-image" src="./assets/img/Bild${i}.jpeg" alt="Bild ${i}">`;
+    ImageDialog.showModal();
 }
 
 renderImageCount();
