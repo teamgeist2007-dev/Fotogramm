@@ -202,11 +202,8 @@ h1 {
     font-family: Arial, sans-serif;
     font-size: 34px;
     font-weight: 700;
+    -webkit-text-stroke: 1px currentColor;
     cursor: pointer;
-}
-
-.dialog-button-back {
-    transform: rotate(180deg);
 }
 
 .dialog-counter {
