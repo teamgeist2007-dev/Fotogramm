@@ -15,21 +15,30 @@ const ImageNames = [
     'Straße in der Scaligerburg'
 ];
 
+let currentImage = 1;
+
 function renderImageCount(){
     for(let i = 1; i <= ImageCount; i++){
-        document.getElementById('photo-gallery').innerHTML += `<img class="gallery-image" src="./assets/img/Bild${i}.jpeg" alt="Bild ${i}" onclick="openImage(${i})">`;
+            const imageName = ImageNames[i - 1];
+        document.getElementById('photo-gallery').innerHTML += `<img class="gallery-image" src="./assets/img/Bild${i}.jpeg" alt="${imageName}" onclick="openImage(${i})">`;
     }
 }
 
-function openImage(i){
-    const imageDialog = document.getElementById('image-dialog');
+function updateImage(){
+    const imageName = ImageNames[currentImage - 1];
     const dialogImage = document.getElementById('dialog-image');
-    const imageName = ImageNames[i - 1];
 
-    dialogImage.src = `./assets/img/Bild${i}.jpeg`;
+    dialogImage.src = `./assets/img/Bild${currentImage}.jpeg`;
     dialogImage.alt = imageName;
     document.getElementById('dialog-title').innerHTML = imageName;
-    imageDialog.showModal();
+    document.getElementById('image-counter').innerHTML = `${currentImage} / ${ImageCount}`;
+}
+
+function openImage(i){
+    currentImage = i;
+   
+    updateImage();
+    document.getElementById('image-dialog').showModal();
     document.getElementById('dialog-title').focus();
 }
 
