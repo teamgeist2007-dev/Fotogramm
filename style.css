@@ -139,9 +139,82 @@ h1 {
 }
 
 .image-dialog {
+    padding: 32px, 24px;
+    border: none;
+    border-radius: 40px;
+    color: #ffffff;
+    background-color: #02394d;
+    overflow: hidden;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-bottom: 48px;
+}
+
+.dialog-title {
+    margin: 0;
+    color: #ffffff;
+    font-family: Figtree, sans-serif;
+}
+
+.dialog-title:focus {
+    outline: none;
+}
+
+.dialog-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
     padding: 0;
     border: none;
+    color: #ffffff;
     background-color: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dialog-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    height: 60px;
+    margin-top: 48px;
+}
+
+.dialog-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    color: #71140e;
+    background-color: #eaaf3a;
+    font-family: Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dialog-button-back {
+    transform: rotate(180deg);
+}
+
+.dialog-counter {
+    margin: 0;
+    color: #ffffff;
+    font-family: Figtree, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .image-dialog::backdrop {
@@ -150,8 +223,9 @@ h1 {
 
 .dialog-image {
     display: block;
+    width: 560px;
     max-width: 80vw;
-    max-height: 80vh;
+    height: auto;
     object-fit: contain;
 }
 
@@ -242,4 +316,15 @@ h1 {
     .page-footer {
         min-height: 128px;
     }
+
+      .image-dialog {
+        padding: 56px 64px;
+    }
+
+    .dialog-image {
+    width: 560px;
+    height: 375px;
+    object-fit: cover;
+}
+
 }

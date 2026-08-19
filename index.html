@@ -49,5 +49,66 @@
         </div>
     </footer>
 
+    <dialog
+    class="image-dialog"
+    id="image-dialog"
+    aria-labelledby="dialog-title"
+    aria-describedby="image-counter"
+>
+    <header class="dialog-header">
+        <h2
+            class="dialog-title"
+            id="dialog-title"
+            tabindex="-1"
+        >
+            Bild 1
+        </h2>
+
+        <button
+            class="dialog-close"
+            type="button"
+            aria-label="Dialog schließen"
+            onclick="closeImage()"
+        >
+            ×
+        </button>
+    </header>
+
+    <img
+        class="dialog-image"
+        id="dialog-image"
+        src="./assets/img/Bild1.jpeg"
+        alt="Bild 1"
+    >
+
+    <footer class="dialog-controls">
+       <button
+    class="dialog-button dialog-button-back"
+    id="previous-image"
+    type="button"
+    aria-label="Vorheriges Bild"
+>
+    ➜
+</button>
+
+        <p
+            class="dialog-counter"
+            id="image-counter"
+            aria-live="polite"
+        >
+            1 / 12
+        </p>
+
+<button
+    class="dialog-button"
+    id="next-image"
+    type="button"
+    aria-label="Nächstes Bild"
+>
+    ➜
+</button>
+    </footer>
+</dialog>
+
     <script src="./script.js"></script>
 </body>

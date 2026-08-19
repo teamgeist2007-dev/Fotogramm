@@ -7,10 +7,19 @@ function renderImageCount(){
 }
 
 function openImage(i){
-    const ImageDialog = document.getElementById('image-dialog');
+    const imageDialog = document.getElementById('image-dialog');
+    const dialogImage = document.getElementById('dialog-image');
 
-    ImageDialog.innerHTML = `<img class="dialog-image" src="./assets/img/Bild${i}.jpeg" alt="Bild ${i}">`;
-    ImageDialog.showModal();
+    dialogImage.src = `./assets/img/Bild${i}.jpeg`;
+    dialogImage.alt = `Bild ${i}`;
+    document.getElementById('dialog-title').innerHTML = `Bild ${i}`;
+    imageDialog.showModal();
+    document.getElementById('dialog-title').focus();
+}
+
+function closeImage() {
+    document.getElementById('image-dialog').close();
+    
 }
 
 renderImageCount();
