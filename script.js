@@ -47,4 +47,24 @@ function closeImage() {
     
 }
 
+function nextImage() {
+    currentImage++;
+
+    if(currentImage > ImageCount) {
+        currentImage = 1;
+    }
+
+    updateImage();
+}
+
+function lastImage() {
+    currentImage--;
+
+    if(currentImage < 1) {
+        currentImage = ImageCount;
+    }
+
+    updateImage();
+}
+
 renderImageCount();
