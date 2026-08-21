@@ -14,11 +14,7 @@
     <header class="page-header">
         <div class="header-content">
             <div class="page-brand">
-                <img
-                    class="page-logo"
-                    src="./assets/icons/Logo_Fotogramm.svg"
-                    alt=""
-                >
+                <img class="page-logo" src="./assets/icons/Logo_Fotogramm.svg" alt="">
 
                 <span class="page-brand-name">Fotogram</span>
             </div>
@@ -29,21 +25,14 @@
         <div class="content-frame">
             <h1>Mein Urlaub am Gardasee</h1>
 
-            <div
-                class="photo-gallery"
-                id="photo-gallery"
-            ></div>
+            <div class="photo-gallery" id="photo-gallery"></div>
         </div>
     </main>
 
     <footer class="page-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img
-                    class="footer-logo"
-                    src="./assets/icons/Logo_Fotogramm.svg"
-                    alt=""
-                >
+                <img class="footer-logo" src="./assets/icons/Logo_Fotogramm.svg" alt="">
 
                 <span class="footer-brand-name">Fotogram</span>
             </div>
@@ -52,67 +41,33 @@
         </div>
     </footer>
 
-    <dialog
-        class="image-dialog"
-        id="image-dialog"
-        closedby="any"
-        aria-labelledby="dialog-title"
-        aria-describedby="image-counter"
-    >
+    <dialog class="image-dialog" id="image-dialog" closedby="any" aria-labelledby="dialog-title"
+        aria-describedby="image-counter">
         <header class="dialog-header">
-            <h2
-                class="dialog-title"
-                id="dialog-title"
-                tabindex="-1"
-            >
+            <h2 class="dialog-title" id="dialog-title" tabindex="-1">
                 Bild 1
             </h2>
 
-            <button
-                class="dialog-close"
-                type="button"
-                aria-label="Dialog schließen"
-                onclick="closeImage()"
-            >
+            <button class="dialog-close" type="button" aria-label="Dialog schließen" onclick="closeImage()">
                 ×
             </button>
         </header>
 
-        <img
-            class="dialog-image"
-            id="dialog-image"
-            src="./assets/img/Bild1.jpeg"
-            alt="Bild 1"
-        >
+        <img class="dialog-image" id="dialog-image" src="./assets/img/Bild1.jpeg" alt="Bild 1">
 
         <footer class="dialog-controls">
-            <button
-                class="dialog-button"
-                id="previous-image"
-                type="button"
-                aria-label="Vorheriges Bild"
-                onclick="lastImage()"
-            >
-                ←
+            <button class="dialog-button" type="button" aria-label="Vorheriges Bild" onclick="lastImage()">
+                <span class="dialog-arrow dialog-arrow-left" aria-hidden="true">➜</span>
             </button>
 
-            <p
-                class="dialog-counter"
-                id="image-counter"
-                aria-live="polite"
-            >
+            <p class="dialog-counter" id="image-counter" aria-live="polite">
                 1 / 12
             </p>
 
-            <button
-                class="dialog-button"
-                id="next-image"
-                type="button"
-                aria-label="Nächstes Bild"
-                onclick="nextImage()"
-            >
-                →
+            <button class="dialog-button" type="button" aria-label="Nächstes Bild" onclick="nextImage()">
+                <span class="dialog-arrow" aria-hidden="true">➜</span>
             </button>
+
         </footer>
     </dialog>
 
